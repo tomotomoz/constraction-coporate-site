@@ -44,7 +44,6 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   font-size: 1.75rem;
-  text-align: center;
   margin-bottom: 56px;
 }
 .ttl::before, .ttl::after {
@@ -84,6 +83,10 @@ a:hover {
   border-bottom: 1px solid #121212;
 }
 
+.sns li {
+  line-height: 2;
+}
+
 .video-area {
   max-width: 100%;
   margin: 0 auto;
@@ -109,12 +112,13 @@ a:hover {
   row-gap: 47px;
 }
 .project-content li {
-  position: relative;
   border: 2px solid #fff;
   box-shadow: 0 2px 7px black;
   transition: 0.5s;
   border-radius: 2px;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(5px);
 }
 .project-content li:hover {
   transform: scale(1.05);
@@ -150,7 +154,6 @@ a:hover {
   padding: calc(50% - 11px) 0;
   border-radius: 50%;
   display: block;
-  text-align: center;
   margin-bottom: 15px;
   position: relative;
   overflow: hidden;
@@ -208,8 +211,8 @@ a:hover {
   border-width: 14px 0 14px 16px;
   border-color: transparent transparent transparent #f3e729;
   position: absolute;
-  top: 100px;
-  left: 48%;
+  top: 120%;
+  left: 49%;
   bottom: 0;
   margin: auto;
   transform: rotate(90deg);
@@ -224,6 +227,9 @@ a:hover {
   padding-bottom: 8px;
   margin-bottom: 10px;
   position: relative;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: 0.5s;
 }
 .flow-discription dt span {
   display: inline-block;
@@ -231,13 +237,18 @@ a:hover {
   height: 35px;
   line-height: 35px;
   background-color: #414141;
-  border-radius: 100px;
+  border-radius: 50%;
   margin-right: 10px;
   text-align: center;
   color: #fff;
   position: absolute;
   bottom: 0;
   left: -45px;
+}
+.flow-discription dd {
+  opacity: 0;
+  transform: translate(5px);
+  transition: 0.5;
 }
 .flow-discription dd:not(:last-child) {
   margin-bottom: 48px;
@@ -252,6 +263,11 @@ a:hover {
   grid-template-columns: 1fr 1fr 1fr;
   -moz-column-gap: 4%;
        column-gap: 4%;
+}
+.contact-content li {
+  opacity: 0;
+  transform: translateY(7px);
+  transition: 0.5s;
 }
 .contact-content li a {
   border: 1px solid #121212;
@@ -270,7 +286,6 @@ a:hover {
 .footer {
   background-color: #121212;
   color: #fff;
-  padding: 20px 0;
 }
 .footer .wrapper {
   padding-bottom: 20px;
@@ -296,10 +311,6 @@ a:hover {
 }
 
 @media screen and (max-width: 960px) {
-  .container {
-    margin-left: 0;
-    margin-top: 20%;
-  }
   .wrapper {
     padding: 40px 4%;
   }
@@ -314,6 +325,10 @@ a:hover {
   .flow-sub-title,
   .contact-sub-title {
     margin-bottom: 30px;
+  }
+  .container {
+    margin-left: 0;
+    margin-top: 20%;
   }
   .header {
     width: 100%;

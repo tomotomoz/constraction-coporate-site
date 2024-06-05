@@ -49,7 +49,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   font-size: 1.75rem;
-  text-align: center;
+  // text-align: center;
   margin-bottom: 56px;
 
   &::before,
@@ -92,6 +92,10 @@ a:hover {
     border-bottom: 1px solid $footerBackgroundColor;
   }
 }
+.sns li{
+  line-height: 2;
+}
+
 
 // video
 .video-area {
@@ -120,13 +124,14 @@ a:hover {
   row-gap: 47px;
 
   li {
-    position: relative;
+    // position: relative;
     border: 2px solid #fff;
     box-shadow: 0 2px 7px black;
     transition: 0.5s;
     border-radius: 2px;
     overflow: hidden;
-
+    opacity: 0;
+    transform: translateY(5px);
     &:hover {
       transform: scale(1.05);
     }
@@ -164,7 +169,6 @@ a:hover {
     padding: calc(50% - 11px) 0;
     border-radius: 50%;
     display: block;
-    text-align: center;
     margin-bottom: 15px;
     position: relative;
     overflow: hidden;
@@ -226,8 +230,8 @@ a:hover {
         border-width: 14px 0 14px 16px;
         border-color: transparent transparent transparent $arrow;
         position: absolute;
-        top: 100px;
-        left: 48%;
+        top: 120%;
+        left: 49%;
         bottom: 0;
         margin: auto;
         transform: rotate(90deg);
@@ -245,6 +249,9 @@ a:hover {
     padding-bottom: 8px;
     margin-bottom: 10px;
     position: relative;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: 0.5s;
   }
 
   dt span {
@@ -253,7 +260,7 @@ a:hover {
     height: 35px;
     line-height: 35px;
     background-color: $flowBG;
-    border-radius: 100px;
+    border-radius: 50%;
     margin-right: 10px;
     text-align: center;
     color: #fff;
@@ -261,7 +268,11 @@ a:hover {
     bottom: 0;
     left: -45px
   }
-
+dd{
+  opacity: 0;
+  transform: translate(5px);
+  transition: 0.5;
+}
   dd:not(:last-child) {
     margin-bottom: 48px;
   }
@@ -275,29 +286,32 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 4%;
-
-  li a {
+li{
+  opacity: 0;
+  transform: translateY(7px);
+  transition: 0.5s;
+ a {
     border: 1px solid $footerBackgroundColor;
     text-align: center;
     padding: 60px 15px;
     display: block;
     box-shadow: 0 2px 5px $footerBackgroundColor;
-    // transform: translateY(3px);
     transition: 0.2s;
     border-radius: 3px;
-
+    
     &:hover {
       transform: translateY(3px);
       box-shadow: none;
     }
   }
 }
+}
 
 
 .footer {
   background-color: $footerBackgroundColor;
   color: #fff;
-  padding: 20px 0;
+  // padding-top: 20px;
 
   .wrapper {
     padding-bottom: 20px;
@@ -326,11 +340,7 @@ a:hover {
 }
 
 @media screen and (max-width: 960px) {
-  .container {
-    margin-left: 0;
-    margin-top: 20%;
-  }
-
+  
   .wrapper {
     padding: 40px 4%;
   }
@@ -345,12 +355,17 @@ a:hover {
       width: 19%;
     }
   }
-
   .flow-sub-title,
   .contact-sub-title {
     margin-bottom: 30px;
   }
 
+  .container {
+    margin-left: 0;
+    margin-top: 20%;
+  }
+
+  
   .header {
     width: 100%;
     height: 80px;
@@ -428,7 +443,6 @@ a:hover {
   .open .mask {
     display: block;
   }
-
 
   .bg-video {
     height: 100vh;
