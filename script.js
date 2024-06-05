@@ -15,8 +15,8 @@ contents.forEach((content) => {
   
 scrollTrigger: {
   trigger: content,
-  start: 'top center',
-  // markers: true
+  start: 'top 70%',
+  markers: true
 },
   y: 0,
   opacity: 1,
