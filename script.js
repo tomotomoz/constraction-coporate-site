@@ -4,6 +4,19 @@ const btn = document.querySelector('.hamburger')
 btn.addEventListener('click', function() {
 nav.classList.toggle('open')
 });
+const btnToTop = document.querySelector('.btn-to-top')
+console.log(btn)
+
+window.addEventListener('scroll', () => {
+  let scrolly = window.scrollY;
+  if(scrolly > 1300){
+    btnToTop.classList.add('active')
+  }else{
+    btnToTop.classList.remove('active')
+  }
+  console.log(window.scrollY);
+});
+
 
 gsap.registerPlugin(ScrollTrigger);
 
