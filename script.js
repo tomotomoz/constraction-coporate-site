@@ -1,3 +1,5 @@
+'use strict'
+// ハンバーガーメニュー
 const nav = document.querySelector('.header-area');
 const btn = document.querySelector('.hamburger')
 
@@ -7,8 +9,9 @@ nav.classList.toggle('open')
 const btnToTop = document.querySelector('.btn-to-top')
 console.log(btn)
 
+// toTopボタン
 window.addEventListener('scroll', () => {
-  let scrolly = window.scrollY;
+  let scrolly = windheaow.scrollY;
   if(scrolly > 1300){
     btnToTop.classList.add('active')
   }else{
@@ -17,7 +20,7 @@ window.addEventListener('scroll', () => {
   console.log(window.scrollY);
 });
 
-
+// fade
 gsap.registerPlugin(ScrollTrigger);
 
 const contents = gsap.utils.toArray('.fade')
@@ -29,7 +32,7 @@ contents.forEach((content) => {
 scrollTrigger: {
   trigger: content,
   start: 'top 70%',
-  // markers: true
+  //  markers: true
 },
   y: 0,
   opacity: 1,
