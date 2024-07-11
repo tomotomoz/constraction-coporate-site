@@ -101,8 +101,8 @@ a:hover {
 
 // video
 .video-area {
-  max-width: 100%;
-  margin: 0 auto;
+  width: 100%;
+  // margin: 0 auto;
   height: 100vh;
 }
 
@@ -403,7 +403,7 @@ a {
   .header {
     width: 100%;
     height: 80px;
-    background-color: #fff;
+    background-color: #bea7a7;
   }
 
   .header-wrapper {
@@ -479,7 +479,7 @@ a {
   }
 
   .bg-video {
-    height: 100vh;
+    height: 90vh;
     max-width: 100%;
   }
 
@@ -513,3 +513,10 @@ a {
     column-gap: 0;
   }
 }
+
+@media  screen and (max-width: 420px) {
+  .bg-video {
+    height: 80vh;
+  }
+}
+
