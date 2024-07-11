@@ -11,7 +11,7 @@ console.log(btn)
 
 // toTopボタン
 window.addEventListener('scroll', () => {
-  let scrolly = windheaow.scrollY;
+  let scrolly = window.scrollY;
   if(scrolly > 1300){
     btnToTop.classList.add('active')
   }else{
