@@ -479,7 +479,7 @@ a {
   }
 
   .bg-video {
-    height: 90vh;
+    height: 100vh;
     max-width: 100%;
   }
 
@@ -514,9 +514,9 @@ a {
   }
 }
 
-@media  screen and (max-width: 420px) {
-  .bg-video {
-    height: 80vh;
-  }
-}
+// @media  screen and (max-width: 420px) {
+//   .bg-video {
+//     height: 80vh;
+//   }
+// }
 

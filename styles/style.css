@@ -428,7 +428,7 @@ a:hover {
     display: block;
   }
   .bg-video {
-    height: 90vh;
+    height: 100vh;
     max-width: 100%;
   }
   .project-content {
@@ -456,10 +456,5 @@ a:hover {
     row-gap: 4%;
     -moz-column-gap: 0;
          column-gap: 0;
-  }
-}
-@media screen and (max-width: 420px) {
-  .bg-video {
-    height: 80vh;
   }
 }/*# sourceMappingURL=style.css.map */
