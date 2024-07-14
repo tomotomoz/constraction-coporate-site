@@ -92,23 +92,42 @@ a:hover {
   li {
     line-height: 3;
     border-bottom: 1px solid $footerBackgroundColor;
+
+    a {
+      width: 100%;
+      display: block;
+      cursor: pointer;
+    }
   }
 }
-.sns li{
+
+.sns li {
   line-height: 2;
+
+  a {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+  }
 }
 
 
 // video
 .video-area {
   width: 100%;
-  // margin: 0 auto;
   height: 100vh;
 }
 
+// @media  screen and (max-width: 420px) {
+//   .bg-video {
+//     top: -500px;
+//   margin-top: -20px;
+//   }
+// }
+
 .bg-video {
   position: fixed;
-  top: -200px;
+  top: -300px;
   z-index: -1;
 }
 
@@ -134,6 +153,7 @@ a:hover {
     overflow: hidden;
     opacity: 0;
     transform: translateY(5px);
+
     &:hover {
       transform: scale(1.05);
     }
@@ -270,11 +290,13 @@ a:hover {
     bottom: 0;
     left: -45px
   }
-dd{
-  opacity: 0;
-  transform: translate(5px);
-  transition: 0.5;
-}
+
+  dd {
+    opacity: 0;
+    transform: translate(5px);
+    transition: 0.5;
+  }
+
   dd:not(:last-child) {
     margin-bottom: 48px;
   }
@@ -288,25 +310,27 @@ dd{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 4%;
-li{
-  opacity: 0;
-  transform: translateY(7px);
-  transition: 0.5s;
-a {
-    border: 1px solid $footerBackgroundColor;
-    text-align: center;
-    padding: 60px 15px;
-    display: block;
-    box-shadow: 0 2px 5px $footerBackgroundColor;
-    transition: 0.2s;
-    border-radius: 3px;
-    
-    &:hover {
-      transform: translateY(3px);
-      box-shadow: none;
+
+  li {
+    opacity: 0;
+    transform: translateY(7px);
+    transition: 0.5s;
+
+    a {
+      border: 1px solid $footerBackgroundColor;
+      text-align: center;
+      padding: 60px 15px;
+      display: block;
+      box-shadow: 0 2px 5px $footerBackgroundColor;
+      transition: 0.2s;
+      border-radius: 3px;
+
+      &:hover {
+        transform: translateY(3px);
+        box-shadow: none;
+      }
     }
   }
-}
 }
 
 // footer
@@ -341,40 +365,41 @@ a {
 }
 
 // toTopButton
-.btn-to-top{
+.btn-to-top {
   position: fixed;
   top: 63%;
-    right: 3%;
-    bottom: 20px;
-    height: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transform: rotate(90deg);
-    font-size: 100%;
-    line-height: 1.5rem;
-    color: $flowBG;
-    padding: 0 0 0 35px;
-    border-top: solid 3px;
-    display: none;
-}
-.btn-to-top::before {
-  content: "";
-    display: block;
-    position: absolute;
-    top: -3px;
-    left: 0px;
-    width: 18px;
-    border-top: solid 3px;
-    transform: rotate(33deg);
-    transform-origin: left top;
+  right: 3%;
+  bottom: 20px;
+  height: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transform: rotate(90deg);
+  font-size: 100%;
+  line-height: 1.5rem;
+  color: $flowBG;
+  padding: 0 0 0 35px;
+  border-top: solid 3px;
+  display: none;
 }
 
-.btn-to-top.active{
+.btn-to-top::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  width: 18px;
+  border-top: solid 3px;
+  transform: rotate(33deg);
+  transform-origin: left top;
+}
+
+.btn-to-top.active {
   display: block;
 }
 
 @media screen and (max-width: 960px) {
-  
+
   .wrapper {
     padding: 40px 4%;
   }
@@ -389,6 +414,7 @@ a {
       width: 19%;
     }
   }
+
   .flow-sub-title,
   .contact-sub-title {
     margin-bottom: 30px;
@@ -399,7 +425,7 @@ a {
     margin-top: 20%;
   }
 
-  
+
   .header {
     width: 100%;
     height: 80px;
@@ -513,10 +539,4 @@ a {
     column-gap: 0;
   }
 }
-
-// @media  screen and (max-width: 420px) {
-//   .bg-video {
-//     height: 80vh;
-//   }
-// }
 
