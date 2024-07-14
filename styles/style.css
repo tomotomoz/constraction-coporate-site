@@ -105,8 +105,8 @@ a:hover {
 
 .bg-video {
   position: fixed;
-  top: -300px;
   z-index: -1;
+  margin-top: -80px;
 }
 
 .project {
@@ -440,6 +440,11 @@ a:hover {
   .bg-video {
     height: 100vh;
     max-width: 100%;
+    top: -300px;
+    margin-top: 0;
+  }
+  .project {
+    margin-top: 120px;
   }
   .project-content {
     grid-template-columns: auto;
